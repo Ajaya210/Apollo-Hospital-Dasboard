@@ -1,4 +1,4 @@
-# Healthcare Analytics Dashboard with Power BI
+# Apollo Healthcare Analytics Dashboard with Power BI
 
 ## Overview
 This project uses Power BI to analyze healthcare datasets, providing insights into patient demographics, treatment outcomes, cost implications, and overall hospital performance. The resulting dashboard aims to uncover trends, identify areas for improvement, and support data-driven decision-making in the healthcare industry.
