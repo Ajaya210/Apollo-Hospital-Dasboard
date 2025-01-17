@@ -1,145 +1,65 @@
-# Apollo Healthcare Data Overview
+# Healthcare Analytics Dashboard with Power BI
 
-## Data Structure
+## Overview
+This project uses Power BI to analyze healthcare datasets, providing insights into patient demographics, treatment outcomes, cost implications, and overall hospital performance. The resulting dashboard aims to uncover trends, identify areas for improvement, and support data-driven decision-making in the healthcare industry.
 
-The data is organized into a table with the following columns:
+## Project Goals
+- Analyze patient demographics, diagnoses, and treatment outcomes.
+- Identify the cost implications of various medical treatments and procedures.
+- Evaluate hospital performance metrics and trends.
+- Create an interactive Power BI dashboard to visualize key insights and metrics.
 
-- **PatientID:** Unique identifier for each patient.
-- **PatientName:** Name of the patient.
-- **Gender:** Patient's gender.
-- **AgeGroup:** Age group of the patient (Child, Senior, Adult).
-- **Hospital:** Hospital where the patient received treatment.
-- **DoctorName:** Doctor responsible for the patient's care.
-- **Diagnosis:** Patient's diagnosed condition.
-- **Treatment:** Type of treatment received (Medication, Therapy, Surgery).
-- **Full Prescription Details:** Description of the prescribed medication or treatment.
-- **Sum of TotalBill:** Total cost of the patient's treatment.
+## Datasets Used
+The project uses two key datasets:
+- **Patient Medical Records**: Contains patient information such as age, gender, blood type, diagnosis, treatments, admission and discharge dates, and total bills.
+- **Hospital Treatment Details**: Provides detailed insights on hospital treatments, including treating doctor, room number, daily costs, treatment types, and recovery ratings.
 
-## Data Analysis
+## Methodology
+The analysis and dashboard creation followed a systematic approach:
+1. **Data Importing & Initial Examination**: Datasets were imported into Power BI and examined for missing values, inconsistencies, or irrelevant data.
+2. **Merging & Relating Datasets**: The datasets were merged using the common "PatientID" column to consolidate the data into a single dataset.
+3. **Data Cleaning**: The data was cleaned by addressing missing values, removing duplicates, and correcting any errors.
+4. **Data Type Conversion**: Dates such as Admission and Discharge were converted to the appropriate date format. Length of Stay was calculated for analysis.
+5. **Categorization**: Patients were categorized into age groups (e.g., Child, Adult, Senior) based on their age to make the analysis more insightful.
+6. **DAX Calculations**: Key calculations were made using DAX to derive insights:
+   - **Total Treatment Cost**: Computed the total cost of treatment for each patient.
+   - **Average Recovery Rating**: Analyzed recovery ratings by treatment type.
+   - **Patient Load Per Room**: Examined the average number of patients per room.
+   - **Doctor’s Patient Load**: Analyzed the number of patients attended by each doctor.
+   - **Correlation Analysis**: Explored the correlation between length of stay and treatment cost.
+   - **Predictive Models**: Built models to predict recovery ratings and future hospital capacity.
+7. **Dashboard Design**: A comprehensive, interactive Power BI dashboard was created, including:
+   - **Patient Demographics**: Breakdown by age, gender, and blood type.
+   - **Treatment Costs**: Total treatment costs by hospital and treatment type.
+   - **Recovery Ratings**: Average recovery rating across different treatment types.
+   - **Hospital Performance**: Key performance indicators like patient load, treatment costs, and recovery rates.
 
-The data can be analyzed to gain insights into various aspects of Apollo Healthcare:
+## Key Insights
+- **Common Diagnoses**: Flu, COVID-19, Hypertension, Diabetes.
+- **Treatment Types**: Medication, Therapy, Surgery.
+- **Treatment Costs**: Total treatment costs range from $2,500 to $15,000.
+- **Patient Demographics**: A significant portion of the patient population falls within the Infant and Adult age groups. Patients are distributed across various blood types, with AB+ being the most prevalent.
+- **Hospital Performance**: A comparison of treatment costs and recovery ratings across different hospitals.
 
-- **Patient demographics:** The data can be used to identify patient demographics like age, gender, and geographical location.
-- **Treatment patterns:** The data can reveal common diagnoses and treatments, helping to understand healthcare trends.
-- **Cost analysis:** The data can be used to analyze the cost of different treatments and identify potential areas for cost optimization.
-- **Doctor performance:**  The data can be used to assess doctor performance based on patient outcomes and treatment costs.
-- **Hospital performance:** The data can be used to compare hospital performance based on patient satisfaction, treatment effectiveness, and cost efficiency.
+### Apollo Healthcare Overview Insights
+- **Total Treatment Costs**: $11.04 million
+- **Patient Demographics**:
+  - Total Patients: 1,000
+  - Average Age: 50.5 years
+  - Patients by Gender: Male: 329, Female: 337, Other: 334
+  - Patients by Age Group: Infant (46.2%), Adult (36.7%), Senior (11.2%)
+  - Patients by Blood Type: AB+ (135), A+ (131), O- (117), etc.
+- **Treatment Costs**: The average treatment cost per hospital ranges from $958.43 to $1,037.80.
+- **Treatment Cost by Type**: Medication: $3.9M, Therapy: $3.8M, Surgery: (details not yet provided).
 
-##  Potential Applications
+## Technologies Used
+- **Power BI**: For data analysis, visualization, and dashboard creation.
+- **DAX**: For calculations and data analysis.
+- **Excel**: For initial data cleaning and preparation.
+- **SQL**: For data queries and merging datasets (if applicable).
 
-The Apollo Healthcare data can be used for a variety of purposes:
-
-- **Clinical decision support:** The data can help healthcare providers make informed decisions about patient care.
-- **Research and development:** The data can be used to conduct research on healthcare trends, treatment effectiveness, and cost-effectiveness.
-- **Performance improvement:** The data can be used to improve the quality and efficiency of healthcare delivery.
-- **Marketing and sales:** The data can be used to target specific patient segments with relevant healthcare products and services.
-
-##  Limitations
-
-The data presented in the image has some limitations:
-
-- **Limited scope:** The data only includes a small sample of patients and may not be representative of the overall population.
-- **Data quality:** The data may contain errors or inconsistencies.
-- **Privacy concerns:** The data may contain personally identifiable information that should be protected.
-
-## Conclusion
-
-The Apollo Healthcare data provides valuable insights into patient demographics, treatment patterns, and cost analysis. By leveraging this data, healthcare providers can enhance decision-making, improve patient outcomes, and optimize resource allocation. Future analyses should focus on expanding the dataset, ensuring data quality, and addressing privacy concerns to maximize the utility of the information. ```markdown
-# Apollo Healthcare Data Overview
-
-This README provides a comprehensive overview of the Apollo Healthcare data presented in the provided image. 
-
-## Data Structure
-
-The data is organized into a table with the following columns:
-
-- **PatientID:** Unique identifier for each patient.
-- **PatientName:** Name of the patient.
-- **Gender:** Patient's gender.
-- **AgeGroup:** Age group of the patient (Child, Senior, Adult).
-- **Hospital:** Hospital where the patient received treatment.
-- **DoctorName:** Doctor responsible for the patient's care.
-- **Diagnosis:** Patient's diagnosed condition.
-- **Treatment:** Type of treatment received (Medication, Therapy, Surgery).
-- **Full Prescription Details:** Description of the prescribed medication or treatment.
-- **Sum of TotalBill:** Total cost of the patient's treatment.
-
-## Data Analysis
-
-The data can be analyzed to gain insights into various aspects of Apollo Healthcare:
-
-- **Patient demographics:** The data can be used to identify patient demographics like age, gender, and geographical location.
-- **Treatment patterns:** The data can reveal common diagnoses and treatments, helping to understand healthcare trends.
-- **Cost analysis:** The data can be used to analyze the cost of different treatments and identify potential areas for cost optimization.
-- **Doctor performance:** The data can be used to assess doctor performance based on patient outcomes and treatment costs.
-- **Hospital performance:** The data can be used to compare hospital performance based on patient satisfaction, treatment effectiveness, and cost efficiency.
-
-## Potential Applications
-
-The Apollo Healthcare data can be used for a variety of purposes:
-
-- **Clinical decision support:** The data can help healthcare providers make informed decisions about patient care.
-- **Research and development:** The data can be used to conduct research on healthcare trends, treatment effectiveness, and cost-effectiveness.
-- **Performance improvement:** The data can be used to improve the quality and efficiency of healthcare delivery.
-- **Marketing and sales:** The data can be used to target specific patient segments with relevant healthcare products and services.
-
-## Limitations
-
-The data presented in the image has some limitations:
-
-- **Limited scope:** The data only includes a small sample of patients and may not be representative of the overall population.
-- **Data quality:** The data may contain errors or inconsistencies.
-- **Privacy concerns:** The data may contain personally identifiable information that should be protected.
-
-## Conclusion
-
-The Apollo Healthcare data provides valuable insights into patient demographics, treatment patterns, and cost analysis. By leveraging this data, healthcare providers can enhance decision-making, improve patient outcomes, and optimize resource allocation. Future analyses should focus on expanding the dataset, ensuring data quality, and addressing privacy concerns to maximize the utility of the information. ```markdown
-# Apollo Healthcare Data Overview
-
-This README provides a comprehensive overview of the Apollo Healthcare data presented in the provided image. 
-
-## Data Structure
-
-The data is organized into a table with the following columns:
-
-- **PatientID:** Unique identifier for each patient.
-- **PatientName:** Name of the patient.
-- **Gender:** Patient's gender.
-- **AgeGroup:** Age group of the patient (Child, Senior, Adult).
-- **Hospital:** Hospital where the patient received treatment.
-- **DoctorName:** Doctor responsible for the patient's care.
-- **Diagnosis:** Patient's diagnosed condition.
-- **Treatment:** Type of treatment received (Medication, Therapy, Surgery).
-- **Full Prescription Details:** Description of the prescribed medication or treatment.
-- **Sum of TotalBill:** Total cost of the patient's treatment.
-
-## Data Analysis
-
-The data can be analyzed to gain insights into various aspects of Apollo Healthcare:
-
-- **Patient demographics:** The data can be used to identify patient demographics like age, gender, and geographical location.
-- **Treatment patterns:** The data can reveal common diagnoses and treatments, helping to understand healthcare trends.
-- **Cost analysis:** The data can be used to analyze the cost of different treatments and identify potential areas for cost optimization.
-- **Doctor performance:**  The data can be used to assess doctor performance based on patient outcomes and treatment costs.
-- **Hospital performance:** The data can be used to compare hospital performance based on patient satisfaction, treatment effectiveness, and cost efficiency.
-
-## Potential Applications
-
-The Apollo Healthcare data can be used for a variety of purposes:
-
-- **Clinical decision support:** The data can help healthcare providers make informed decisions about patient care.
-- **Research and development:** The data can be used to conduct research on healthcare trends, treatment effectiveness, and cost-effectiveness.
-- **Performance improvement:** The data can be used to improve the quality and efficiency of healthcare delivery.
-- **Marketing and sales:** The data can be used to target specific patient segments with relevant healthcare products and services.
-
-## Limitations
-
-The data presented in the image has some limitations:
-
-- **Limited scope:** The data only includes a small sample of patients and may not be representative of the overall population.
-- **Data quality:** The data may contain errors or inconsistencies.
-- **Privacy concerns:** The data may contain personally identifiable information that should be protected.
-
-## Conclusion
-
-The Apollo Healthcare data provides valuable insights into patient demographics, treatment patterns, and cost analysis. By leveraging this data, healthcare providers can enhance decision-making, improve patient outcomes, and optimize resource allocation. Future analyses should focus on expanding the dataset, ensuring data quality, and addressing privacy concerns to maximize the utility of the information.
+## Future Work and Improvements
+- **Advanced Predictive Modeling**: Enhance prediction accuracy for patient recovery and treatment outcomes.
+- **Trend Analysis**: Further analyze trends in hospital admissions, patient outcomes, and treatment costs.
+- **Integration of Patient Feedback**: Include patient satisfaction surveys to improve treatment insights.
+- **Healthcare Policy Implications**: Analyze the impact of hospital policies on treatment outcomes and costs.
